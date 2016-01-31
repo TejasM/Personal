@@ -1,38 +1,44 @@
-/* These styles are generated from project.scss. */
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif; }
 
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
-}
+html {
+  font-size: 80%; }
 
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
-}
+body {
+  font-family: "Fauna One", serif;
+  background-color: #DDDDDD; }
 
-/* This is a fix for the bootstrap4 alpha release */
-@media (max-width: 47.9em) {
-  .navbar-nav .nav-item {
-    float: none;
-    width: 100%;
-    display: inline-block;
-  }
+h5 {
+  font-size: 1.4rem; }
 
-  .navbar-nav .nav-item + .nav-item {
-    margin-left: 0;
-  }
+.content h3 {
+  color: #FF6138; }
 
-  .nav.navbar-nav.pull-xs-right {
-    float: none !important;
-  }
-}
+hr {
+  border-top: solid 1px #111; }
 
-/* Display django-debug-toolbar.
-   See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
-   and https://github.com/pydanny/cookiecutter-django/issues/317
-*/
-[hidden][style="display: block;"] {
-  display: block !important;
-}
+p {
+  font-size: 1.2rem; }
+
+.m20 {
+  margin-top: 20px; }
+
+.text-center {
+  text-align: center; }
+
+.main-container {
+  max-width: 800px;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -o-box-shadow: 0 5px 5px #333333;
+  -webkit-box-shadow: 0 5px 5px #333333;
+  -moz-box-shadow: 0 5px 5px #333333;
+  box-shadow: 0 5px 5px #333333; }
