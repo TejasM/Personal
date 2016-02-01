@@ -1,0 +1,17 @@
+{% extends 'writings/base_writings.html' %}
+{% block actual_content %}
+<div class="row m20">
+	<div class="col-lg-12">
+		<h3>Frustrations with XCode</h3>
+	</div>
+</div>
+<div class="row m20">
+	<div class="col-lg-12">
+		<p>
+		XCode is very easy to pick up. I mean simply layout your app with drag and drop widgets and connect them to individual controllers. However, last night I spent well over two hours fixing a basic issue as a result of this simplicity. When you connect a UI element to the controller, you simply right click and drag the layout to the controller. This then adds a reference to the element in your controller. However lets imagine you need to rename your entity, for hundreds of possible reasons, then the reference is lost! Even worse, once I figured that out and recreated the references, I got a worse no descriptive NSException error.</p>
+
+		<p>A bit of Googling revealed that this might be due to incorrect references. Digging into the quick help view, I found that there were two references there - including the old one which had been long renamed and removed. All problems were gone once I removed all the duplicate references from all elements. I found this error to be quite annoying as it seems like an obvious thing to refactor references and delete old ones when new ones are created. For someone just picking up iOS programming, this was an annoying but revealing experience about assuming how much Xcode interpolates and how much I need to explicitly do.
+		</p>
+	</div>
+</div>
+{% endblock %}
