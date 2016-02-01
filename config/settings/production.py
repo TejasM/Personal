@@ -111,7 +111,7 @@ INSTALLED_APPS += ("gunicorn", )
 # # stored files.
 # MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
 
 # Static Assets
 # ------------------------
