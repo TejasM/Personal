@@ -164,11 +164,7 @@ CACHES = {
 # SENTRY_CLIENT = env('DJANGO_SENTRY_CLIENT', default='raven.contrib.django.raven_compat.DjangoClient')
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
-    'root': {
-        'level': 'WARNING',
-        'handlers': ['sentry'],
-    },
+    'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s '
@@ -176,10 +172,10 @@ LOGGING = {
         },
     },
     'handlers': {
-        'django': {
-            'handlers': ['file', 'console', 'mail_admins',],
-            'propagate': True,
-            'level': 'DEBUG',
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'app.mailing.AdminEmailHandler'
         },
         'console': {
             'level': 'DEBUG',
@@ -188,9 +184,14 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.db.backends': {
+        'django.request': {
+            'handlers': ['mail_admins'],
             'level': 'ERROR',
-            'handlers': ['console'],
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['logfile'],
+            'level': 'ERROR',
             'propagate': False,
         },
     },
