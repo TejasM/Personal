@@ -12,6 +12,7 @@ html {
 
 body {
     font-family: $body-font;
+    color: #333;
     background-color: #DDDDDD;  
 }
 
@@ -39,6 +40,11 @@ p {
 
 .text-center {
     text-align: center;
+}
+
+.no-text-transform {
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
 .main-container {

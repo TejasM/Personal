@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from tejas.pages import views
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
@@ -14,6 +15,10 @@ urlpatterns = [
     url(r'^learnings/$', TemplateView.as_view(template_name='pages/learnings.html'), name="learnings"),
     url(r'^projects/$', TemplateView.as_view(template_name='pages/projects.html'), name="projects"),
     url(r'^writings/$', TemplateView.as_view(template_name='pages/writings.html'), name="writings"),
+
+    url(r'^learnings/(?P<slug>[\w-]+)/$', views.learnings, name='learnings_detail'),
+    url(r'^projects/(?P<slug>[\w-]+)/$', views.projects, name='projects_detail'),
+    url(r'^writings/(?P<slug>[\w-]+)/$', views.writings, name='writings_detail'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, include(admin.site.urls)),
