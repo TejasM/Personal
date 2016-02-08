@@ -1,0 +1,35 @@
+{% extends 'projects/base_projects.html' %}
+{% block actual_content %}
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h3>Dissemination of <a href="https://sharpscholar.com" target="_blank">SharpScholar</a></h3>
+        </div>
+    </div>
+    <div class="row m20">
+        <div class="col-lg-12">
+            <p>One and a half years ago I officially joined <a href="https://sharpscholar.com" target="_blank">SharpScholar</a>
+                as a technical co-founder. It has been an epic
+                journey from 1 researcher to 16 professors and 9 Universities, from my basement to the Silicon Valley.
+                Along the way, there naturally things I have done well and things I wish to improve on. The following
+                series of posts is an attempt at connecting the dots backwards:
+            </p>
+            <ul>
+                <li>
+                    <a href="{% url 'projects_detail' 'my-role-at-sharpscholar' %}"><p>My role at SharpScholar</p></a>
+                </li>
+                <li>
+                    <p>Defining SharpScholar (a product perspective)</p>
+                </li>
+                <li>
+                    <p>What we are doing well</p>
+                </li>
+                <li>
+                    <p>What we are doing poorly</p>
+                </li>
+                <li>
+                    <p>How I would do things differently</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
