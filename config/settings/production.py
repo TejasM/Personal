@@ -15,12 +15,6 @@ Production Configurations
 '''
 from __future__ import absolute_import, unicode_literals
 
-from boto.s3.connection import OrdinaryCallingFormat
-from django.utils import six
-
-import logging
-
-
 from .common import *  # noqa
 
 # SECRET CONFIGURATION
@@ -74,7 +68,9 @@ SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 # ------------------------------------------------------------------------------
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['venture-t.com'])
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['venture-t.com', '*.tejmehta.com'])
+
+PREPEND_WWW = True
 # END SITE CONFIGURATION
 
 INSTALLED_APPS += ("gunicorn", )
