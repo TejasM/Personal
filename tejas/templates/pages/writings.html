@@ -1,42 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row m20">
-	<div class="col-lg-12">
-		<h2>Writings</h2>
-	</div>
-</div>
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h2>Writings</h2>
+        </div>
+    </div>
 
-<div class="row m20">
-	<div class="col-lg-12">
-		<h3>Newest</h3>
-	</div>
-</div>
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h3>Newest</h3>
+        </div>
+    </div>
 
-<div class="row m20">
-	<div class="col-lg-12">
-		<ul>
-			<li>
-				<p><a href="{% url 'writings_detail' 'frustrations-with-xcode' %}">Frustrations with Xcode</a></p>
-			</li>
-			<li>
-				<p><a href="{% url 'writings_detail' 'the-real-difference-between-engineers-of-today-and-last-generation' %}">The real difference between engineers of today and last generation</a></p>
-			</li>
-			<li>
-				<p><a href="{% url 'writings_detail' 'follow-skill-vs-passion' %}">Follow Skill vs. Passion</a></p>
-			</li>
-			<li>
-				<p><a href="{% url 'writings_detail' 'kindness' %}">Kindness</a></p>
-			</li>
-			<li>
-				<p><a href="{% url 'writings_detail' 'modulating-intensity' %}">Modulating Intensity</a></p>
-			</li>
-			<li>
-				<p><a href="{% url 'writings_detail' 'polarized-point-of-view' %}">Polarized Point of Views</a></p>
-			</li>
-			<li>
-				<p><a href="{% url 'writings_detail' 'two-things-i-want-to-teach-my-kids' %}">Two Things I want to Teach My Kids</a></p>
-			</li>
-		</ul>
-	</div>
-</div>
+    <div class="row m20">
+        <div class="col-lg-12">
+            <ul>
+                <li>
+                    <p><a href="{% url 'writings_detail' 'polarized-point-of-view' %}">Polarized Point of Views</a></p>
+                </li>
+                <li>
+                    <p><a href="{% url 'writings_detail' 'two-things-i-want-to-teach-my-kids' %}">Two Things I want to
+                        Teach My Kids</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h3>Random</h3>
+        </div>
+    </div>
+
+    <div class="row m20">
+        <div class="col-lg-12">
+            <ul>
+                <li>
+                    <p><a href="{% url 'writings_detail' 'frustrations-with-xcode' %}">Frustrations with Xcode</a></p>
+                </li>
+                <li>
+                    <p>
+                        <a href="{% url 'writings_detail' 'the-real-difference-between-engineers-of-today-and-last-generation' %}">The
+                            real difference between engineers of today and last generation</a></p>
+                </li>
+                <li>
+                    <p><a href="{% url 'writings_detail' 'follow-skill-vs-passion' %}">Follow Skill vs. Passion</a></p>
+                </li>
+                <li>
+                    <p><a href="{% url 'writings_detail' 'kindness' %}">Kindness</a></p>
+                </li>
+                <li>
+                    <p><a href="{% url 'writings_detail' 'modulating-intensity' %}">Modulating Intensity</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}

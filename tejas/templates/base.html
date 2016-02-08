@@ -41,18 +41,18 @@
       <div class="col-sm-4">
         <h5>SharpScholar</h5>
         <h5>Toronto, Canada</h5>
-        <h5><a href="tejasmehta0@gmail.com">tejasmehta0@gmail.com</a></h5>
+        <h5><a href="mailto:tejasmehta0@gmail.com">tejasmehta0@gmail.com</a></h5>
       </div>
     </div>
     <div class="row m20 text-center">
     <div class="col-xs-3">
-        <h4><a href="#">Projects</a></h4>
+        <h4><a href="{% url 'projects' %}">Projects</a></h4>
       </div>
       <div class="col-xs-3">
-        <h4><a href="{% url 'writings' %}">Writings</a></h4> 
+        <h4><a href="{% url 'writings' %}">Writings</a></h4>
       </div>
       <div class="col-xs-3">
-        <h4><a href="#">Learnings</a></h4>
+        <h4><a href="{% url 'learnings' %}">Learnings</a></h4>
       </div>
       <div class="col-xs-3">
         <h4><a href="#">About Me</a></h4>
@@ -99,4 +99,4 @@
     {% endblock javascript %}
   </body>
 </html>
- 
+

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h2>Projects</h2>
+        </div>
+    </div>
+
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h3>Current Projects</h3>
+        </div>
+    </div>
+
+    <div class="row m20">
+        <div class="col-lg-12">
+            <ul>
+                 <li>
+                    <p><a href="{% url 'projects_detail' 'sharpscholar-dissemination' %}">SharpScholar</a> — Build an teaching
+                        platform for teachers to personalize their lessons for their classes.</p>
+                </li>
+                <li>
+                    <p>FireStopper - a small attachment to a stove that would cut off power on hearing the smoke
+                        alarm.</p>
+                </li>
+                <li>
+                    <p><a target="_blank" href="https://test.out-adventures.com">OutAdventures</a> - Freelance project
+                        to rebuild <a target="_blank" href="https://out-adventures.com">this</a> to a complete redesign.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row m20">
+        <div class="col-lg-12">
+            <h3>Past Projects</h3>
+        </div>
+    </div>
+
+    <div class="row m20">
+        <div class="col-lg-12">
+            <ul>
+                <li>
+                    <p>Project Wisely</p>
+                </li>
+                <li>
+                    <p>MeHelpYou</p>
+                </li>
+                <li>
+                    <p>SportsTab</p>
+                </li>
+                <li>
+                    <p>AIGame Dev CTF Competition</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
