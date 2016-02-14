@@ -22,7 +22,7 @@ urlpatterns = [
                   url(r'^writings/(?P<slug>[\w-]+)/$', views.writings, name='writings_detail'),
 
                   # Django Admin, use {% url 'admin:index' %}
-                  #url(r'^filer/', include('filer.urls')),
+                  url(r'^files/', include('filemanager.urls', namespace='filemanager')),
                   url(settings.ADMIN_URL, include(admin.site.urls)),
 
                   # User management
