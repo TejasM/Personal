@@ -43,6 +43,8 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'grappelli',
+    'filebrowser',
 )
 
 # Apps specific for this project go here.
