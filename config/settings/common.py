@@ -43,9 +43,9 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
-    'easy_thumbnails',
-    'filer',
-    'mptt',
+    # 'easy_thumbnails',
+    # 'filer',
+    # 'mptt',
 )
 
 THUMBNAIL_HIGH_RESOLUTION = True
