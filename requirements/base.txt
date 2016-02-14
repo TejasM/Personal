@@ -42,4 +42,4 @@ redis>=2.10.0
 
 
 # Your custom requirements go here
-django-filebrowser==3.6.1
+django-filer==1.1.1

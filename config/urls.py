@@ -7,7 +7,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
-from filebrowser.sites import site
 
 from tejas.pages import views
 
@@ -23,8 +22,7 @@ urlpatterns = [
                   url(r'^writings/(?P<slug>[\w-]+)/$', views.writings, name='writings_detail'),
 
                   # Django Admin, use {% url 'admin:index' %}
-                  url(r'^admin/filebrowser/', include(site.urls)),
-                  url(r'^grappelli/', include('grappelli.urls')),
+                  url(r'^filer/', include('filer.urls')),
                   url(settings.ADMIN_URL, include(admin.site.urls)),
 
                   # User management
