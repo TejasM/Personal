@@ -7,8 +7,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from filebrowser.sites import site
 
 from tejas.pages import views
+
 
 urlpatterns = [
                   url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
@@ -23,6 +25,8 @@ urlpatterns = [
 
                   # Django Admin, use {% url 'admin:index' %}
                   url(r'^files/', include('filemanager.urls', namespace='filemanager')),
+                  url(r'^admin/filebrowser/', include(site.urls)),
+                  url(r'^grappelli/', include('grappelli.urls')),
                   url(settings.ADMIN_URL, include(admin.site.urls)),
 
                   # User management

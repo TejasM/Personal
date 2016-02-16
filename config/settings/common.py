@@ -36,6 +36,8 @@ DJANGO_APPS = (
     # 'django.contrib.humanize',
 
     # Admin
+    'grappelli',
+    'filebrowser',
     'django.contrib.admin',
 )
 THIRD_PARTY_APPS = (
@@ -43,7 +45,6 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
-    'filemanager',
 )
 
 # Apps specific for this project go here.
@@ -230,6 +231,7 @@ LOGIN_URL = 'account_login'
 # SLUGLIFIER
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
 
+DIRECTORY = '/uploads/'
 # Location of root django.contrib.admin URL, use {% url 'admin:index' %}
 ADMIN_URL = r'^admin/'
 
